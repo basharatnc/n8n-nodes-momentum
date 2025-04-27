@@ -2,7 +2,7 @@
 
 This is an n8n community node. It lets you integrate NowCerts with your n8n workflows.
 
-NowCerts is an insurance management system offering features like client/prospect management, policy tracking, and task automation.
+The Momentum Node allows seamless integration with the NowCerts API, enabling you to automate creating and updating prospects, insureds, policies, and tasks etc within your n8n workflows.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
