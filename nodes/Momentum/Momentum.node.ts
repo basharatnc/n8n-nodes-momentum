@@ -4,7 +4,7 @@ import type {
 	INodeType,
 	INodeTypeDescription,
 } from 'n8n-workflow';
-import { NodeConnectionType, NodeOperationError } from 'n8n-workflow';
+import { NodeOperationError } from 'n8n-workflow';
 
 export class Momentum implements INodeType {
 	description: INodeTypeDescription = {
@@ -17,8 +17,8 @@ export class Momentum implements INodeType {
 		defaults: {
 			name: 'Momentum',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'],  // Changed to ['main']
+		outputs: ['main'],  // Changed to ['main']
 		credentials: [
 			{
 				name: 'momentumApi',
@@ -37,6 +37,7 @@ export class Momentum implements INodeType {
 					{ name: 'Create Task', value: 'createTask' },
 				],
 				default: 'createProspect',
+				noDataExpression: true,  // Added noDataExpression here
 			},
 			{
 				displayName: 'Prospect Data',
